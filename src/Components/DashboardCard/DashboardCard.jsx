@@ -1,17 +1,12 @@
-import { NavLink } from "react-router-dom";
 
-const Card = ({coffee}) => {
-
-   
+const DashboardCard = ({coffee}) => {
 
     const {category, id, type, origin, rating, popularity,ingredients , image} = coffee
 
     const [first, second] = ingredients
-    
-    return (
 
-        <NavLink to={`/coffees/${id}`}>
-            <div className="card bg-base-100 shadow-xl hover:scale-105 hover:ease-in-out hover: transition-transform">
+    return (
+       <div className="card bg-base-100 shadow-xl hover:scale-105 hover:ease-in-out hover: transition-transform relative">
         <figure>
           <img
             src={image}
@@ -27,9 +22,12 @@ const Card = ({coffee}) => {
           <p>Popular:{popularity} </p>
 
         </div>
+
+        <div className="absolute left-[90%] -top-5">
+            <button  className="btn btn-warning rounded-full"> delete </button>
+        </div>
       </div>
-        </NavLink>
     );
 };
 
-export default Card;
+export default DashboardCard;

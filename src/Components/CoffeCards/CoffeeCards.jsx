@@ -10,7 +10,6 @@ const CoffeeCards = () => {
 
     const coffeeData = useLoaderData()
 
-    console.log(category,coffeeData)
 
     const [coffees, setCoffees] = useState([])
 
